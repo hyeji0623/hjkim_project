@@ -1,0 +1,457 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;cursor: pointer;}
+body{background-color: #e1e1e1;}
+@media screen and (max-width:640px){
+  body{min-width:320px;}
+  .h_container{width: 96%; margin: 0 auto;}
+  /* 헤더시작--------------------------------------- */
+  header{background-color: #ffffff;width: 100%; height: 50px;min-width:320px;position: fixed;top:0; left: 0;box-shadow: 0 4px 4px #bcbcbc;z-index: 1000;}
+    .mobile_only{width: 100%; height: 100%;z-index: 1001;}
+    .top_login{display: none;}
+    .header_main{width: 100%; height: 100%;}
+    .logo{display: none;}
+    .hb{position: absolute;left: 2%;top:50%;transform: translateY(-50%);}
+    .ham{display: block;width: 30px; height: 18px;padding-top: 12px;cursor: pointer;}
+    .ham span{display: block;width: 30px; height: 5px;background-color:#100e0e; position: relative;}
+    .ham span::before{content: "";width:30px; height: 5px; background-color:#100e0e;position: absolute;left: 0;bottom: -10px;}
+    .ham span::after{content: "";width: 30px; height: 5px; background-color:#100e0e;position: absolute;left: 0;top:-10px;}
+    .m_logo{width: 121px; height: 41px;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);}
+    .m_logo img{width: 100%; height: 100%;}
+    .m_search_icon,.m_bag{float: right; width: 17px;height: 18px;margin-left: 3%;margin-top:16px; cursor: pointer;}
+    .m_search_icon{ width: 17px;height: 18px;}
+    .m_bag{width: 22px; height: 18px;margin-right: 2%}
+    .search_wrap{width: 250px;height: 40px;border: 2px solid #ae1111;background-color: #ffffff;position: absolute;top:50px;right:0;display: none;}
+    .search_text{width: 90%; height: 50%;position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    .search_wrap input{display: block;width: 80%; height: 100%;border: none;box-sizing:border-box;background: transparent;outline: none;float: left;}
+    .search_wrap  button{width: 17px; height: 18px;position: absolute;top:50%;right:0;transform: translateY(-50%);outline: none;background: transparent;border: none;cursor: pointer;}
+    .search_wrap button img{width: 100;height: 100%;}
+    .login_text{display: none;}
+    .m_hover_back{width: 100%;height: 100vh;position: absolute;top:0;left: 0;background-color:rgba(19, 18, 18, 0.72);z-index: 1001;display: none;}
+    .header_menu{display: none;}
+    .m_header_menu{width: 95%;height: 100vh;background-color:white;position: absolute;top:0; left: -200%;z-index: 1100;transition: all 0.8s;}
+    .m_header_menu.on{left: 0;}
+    .m_login{width: 97%;height: 49px;padding-left: 3%;border-bottom: 1px solid #c7c7c7;}
+    .m_login a{display: block;position: relative;top:50%; transform: translateY(-50%);color: #444;font-family: '나눔고딕'; font-size: 16px;}
+    .close{width: 20px; height: 20px;padding: 5px;position: absolute;right: 2%; top:10px;}
+    .close img{width: 100%;height: 100%;}
+    .m_header_menu_ul{width:35%; height: calc(100vh - 50px);overflow-y: auto;background-color: #67625d;}
+    .m_header_menu_li{width: 90%; height: 45px;line-height: 45px; padding-left: 10%;font-family: '나눔고딕'; font-size: 15px;}
+    .m_header_menu_li .li_a{display:block;width: 100%;height: 100%;position: relative;color:#fbf9f6;}
+    .find_store_img{width: 13px; height: 19px;position: relative;top:4px;margin-right: 5px;}
+    .m_header_menu_li span{display:block;width: 7px; height:11px;position: absolute;right: 5%; top:50%;transform: translateY(-50%);background: url("../img/m_menu_arrow.png") no-repeat;display: none;}
+    /* 호버 */
+    .m_header_menu_li .menu_hover{width: 65%; height: calc(100vh - 50px);background-color: #ffffff;position: absolute;left:35%; top: 51px;overflow-y: auto;display: none;}
+    .m_header_menu_li .menu_hover ul{width: 90%;float: left;margin: 0 5%;}
+    .m_header_menu_li .menu_hover ul li{font-size: 13px;font-family: '나눔고딕';color:#444;width: 100%; height: 40px;line-height: 40px;border-bottom: 1px solid #c7c7c7;text-align: left;}
+    .m_header_menu_li .menu_hover ul li a{display: inline;padding: 2px 0;}
+  /* 메인 섹션시작-----------------------------------------*/
+  .section_wrap{margin-top:63px;}
+    /* 메인 슬라이드--------------------------------------- */
+    .main_slide_box{
+      max-width: 100%;min-width: 320px;position: relative;left: 50%;transform: translateX(-50%);}
+      .main_slide{width: 100%;overflow: hidden;}
+      .slide_ul{position: relative;width: 300%; left: -100%;}
+      .slide_ul::after{display: block;content: '';clear: both;}
+      .slide_li{float: left; width: 33.333%;}
+      .slide_li img{width: 100%;height: auto;vertical-align: top;}
+      .bt_box{width: 99px; height: 32px;border-radius: 20px;position: absolute;bottom: -16px;left: 50%;transform: translateX(-50%);background-color: #ffffff;border: 1px solid #cdcdcd;}
+      .bt_wrap a{
+        display: block;width: 9px; height: 19px;padding: 2px 5px;
+        position: absolute;top:50%;transform: translateY(-50%);z-index: 10;
+      }
+      .bt_wrap .bt_l{left: 10px;}
+      .bt_wrap .bt_r{right:10px;}
+      .bt_wrap a img{width: 100%;height: 100%;}
+      .slide_count{position: static;text-align: center;color: #666;line-height:36px;font-size: 14px;font-family: '나눔고딕';}
+
+    /* 홀리데이 기프트--------------------------------------*/
+    .holiday_gift{margin-top: 5.8%;}
+      .holiday_gift_box{width: 100%;}
+      .holiday_gift_box::after{display: block;content: "";clear: both;}
+      .gift_list{float: left;width: 48.75%;height: auto;margin: 0 2.5% 2.5% 0;position: relative;}
+      .gift_list.g1{display: none;}
+      .gift_list.g2,.gift_list.g4{margin-right: 0;}
+      .gift_list img{width: 100%; height: auto;vertical-align: top;}
+      .gift_text{width: 62.5%; height: 14.2%;border-radius: 22px;background-color: #000cb0;position: absolute;top: 5%;right: 3.5%;}
+      .gift_list.g1 .gift_text{width: 38.46%;}
+      .gift_text p{text-align: center;color:#f7f7fb;font-size: 2.7vw;font-family: '나눔고딕';position: relative;top: 50%;transform: translateY(-50%);}
+    /* 많이 검색한 제품------------------------------------ */
+    .best_item_wrap{margin-top: 1.8%;}
+      .m_container{width: 100%;}
+      .title_best{text-align: center;width: 100%; height: 75px;}
+      .title_best p{font-size: 20px;font-family: '나눔고딕_bold';line-height: 82px; color:#444;}
+      .best_item{background-color: #ffffff;width: 100%;position: relative;overflow: hidden;}
+      .best_item ul{width:960%;margin-left: 4%;position: relative;left:0;}
+      .best_item ul li{float: left; width:4%;margin-right: 1%;position: relative;}
+      .best_item ul li img{width: 100%;height: auto;}
+      .bt_best_l,.bt_best_R{width: 4%;height: 100%;position: absolute;top: 0;cursor: pointer;}
+      .bt_best_l{left: 0;}
+      .bt_best_R{right: 0;}
+      .bt_best_l img,.bt_best_R img{width: 15px; height: 28px;position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);}
+      .num{width: 100%;margin-bottom: 6%;text-align: center;color:#838383;font-family: '나눔고딕_bold';}
+      .bestone{color:#ca0303;}
+      .num h3{padding: 16%;font-size: 25px;}
+      .bext_info{width: 100%;padding: 12% 0 15% 0;}
+      .bext_info p{font-size: 2.6vw;font-family: '나눔고딕';color:#444;text-align: center;}
+      .bext_info p:nth-child(2){margin: 4% 0 8% 0;font-size: 3.5vw;font-weight: bold;}
+    /* 화장품 박스---------------------------------------- */
+    .cosmetic_wrap{margin-top: 5%; background-color: #ffffff;}
+      .cosmetic_boxs{width: 100%;padding: 5% 0;}
+      .cosmetic_boxs ul{overflow: hidden;}
+      .cosmetic_boxs ul li{margin-bottom: calc( 13% / 790 * 100 );position: relative;height: 100%;overflow: hidden;}
+      .cosmetic_boxs ul li img{width: 100%; height: auto;vertical-align: top;transition: all 1s;}
+      .cosmetic_boxs .c1{width:calc( 435% / 790 * 100 );margin-right: calc( 13% / 790 * 100 );float: left;}
+      .cosmetic_boxs .c2{width:calc( 342% / 790 * 100 );float: left;}
+      .cosmetic_boxs .c3{width:100%;height: auto;}
+      .c1:hover img,.c2:hover img,.box1:hover img,.box2:hover img{
+        transform:scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+      }
+      .cosmetic_boxs .c3 .box1{margin-bottom: calc( 13% / 790 * 100 );}
+      .box1,.box2{position: relative;overflow: hidden;}
+      .text_back,.text_back02{width: 100%;background-color: rgba(255, 255, 255, 0.7);position: absolute;left: 0;z-index: 2;}
+      .text_back{height: 30%;top: 0;}
+      .text_back02{height: 28%;bottom: 0;}
+      .text_box{position: relative;top: 50%;transform: translateY(-50%);text-align: center;color:#0c0c0c;}
+      .text_box h3{font-family: '나눔고딕';font-size: 14px;font-weight:700;}
+      .text_back p{display: none;}
+      .text_box p{font-family: '나눔고딕';font-size: 12px;font-weight: 400;}
+      .text_back02 h3{display: inline-block;margin-right: 1%;}
+      .text_back02 p{display: inline-block;}
+    /* 애니 이동---------------------------------------- */
+    .cosmetic_wrap_02{width: 100%;overflow: hidden;margin-top: 5%;}
+      .move_ani{width: 100%; height: 100%;position: relative;}
+      .mens_cosme{width: 50%;position: absolute;left:-100%;opacity: 0;}
+      .skincare{width: 50%;position: absolute;right:-100%;opacity: 0;}
+      .mens_cosme img, .skincare img{width: 100%; height: auto;vertical-align: top;}
+      .move_ani_back{display: block;  width: 100%;height: 100%;position: absolute;top:0; left: 0;}
+      .move_ani_text{position: relative;top: 50%;transform: translateY(-60%);text-align: center;opacity: 0;}
+      .move1:hover .move_ani_back{background-color: rgba(0, 0, 0, 0.49);}
+      .move1:hover .move_ani_text {opacity: 1;}
+      .move_ani_text .pc_h2{display: none;}
+      .move_ani_text h2{font-size: 2.5vw;font-family: 'SCDream6';color:#ffffff;margin-bottom: 5%;}
+      .button_buy{width: 100px; height: 31px;border-radius: 20px;background-color:rgba(255, 255, 255, 0.85);margin: 0 auto;transition: all 0.8s;}
+      .button_buy:hover{background-color:rgba(17, 16, 16, 0.85);}
+      .button_buy:hover .dd{color:#ffffff;}
+      .dd{display: block;width: 100%;height: 100%;color:#111010;font-family: 'SCDream6';font-size: 2.5vw;line-height: 31px;}
+    /* 푸터----------------------------------------------- */
+    footer{background-color: #312f2f;margin-top: 6%;padding-bottom: 2%;}
+      .footer_text{width: 100%;text-align: center;position: relative;}
+      .footer_text p{font-family: '나눔고딕_bold';font-size: 10px;}
+      .f_p1{padding: 4% 0 2% 0;  color: #888787;line-height: 17px;}
+      .f_icon a{display: inline-block;margin-left: 1%;width: 23px; height: 23px;}
+      .f_icon a img{width: 100%;}
+      .f_p2{margin: 2.8% 0 1.8% 0;color: #656464;}
+      .f_p3{color: #fbf6f6;}
+      .f_p3 a{margin-left: 1%;}
+      .f_p3 a:nth-child(n+2){color: #888787;}
+      .f_logo{display: none;}
+      /* .f_logo img{width: 100%;} */
+}
+@media screen and (min-width:640px) and (max-width:1200px){
+  .h_container{width: 96%; margin: 0 auto;}
+  /* 헤더시작--------------------------------------- */
+  header{background-color: #ffffff;width: 100%; height: 60px;position: fixed;top:0; left: 0;box-shadow: 0 4px 4px #bcbcbc;z-index: 1000;}
+    .mobile_only{width: 100%; height: 100%;z-index: 1001;}
+    .top_login{display: none;}
+    .header_main{width: 100%; height: 100%;}
+    .logo{display: none;}
+    .hb{position: absolute;left: 2%;top:50%;transform: translateY(-50%);}
+    .ham{display: block;width: 30px; height: 18px;padding-top: 12px;cursor: pointer;}
+    .ham span{display: block;width: 30px; height: 5px;background-color:#100e0e;position: relative;}
+    .ham span::before{content: "";width:30px; height: 5px; background-color:#100e0e;position: absolute;left: 0;bottom: -10px;}
+    .ham span::after{content: "";width: 30px; height: 5px; background-color:#100e0e;position: absolute;left: 0;top:-10px;}
+    .m_logo{width: 121px; height: 41px;position: absolute;top: 50%; left: 50%;transform: translate(-50%,-50%);}
+    .m_logo img{width: 100%; height: 100%;}
+    .m_search_icon,.m_bag{float: right; width: 17px;height: 18px;margin-left: 3%;margin-top:21px; cursor: pointer;}
+    .m_search_icon{ width: 17px;height: 18px;}
+    .m_bag{width: 22px; height: 18px;margin-right: 2%}
+    .search_wrap{width: 250px;height: 40px;border: 2px solid #ae1111;background-color: #ffffff;position: absolute;top:60px;right:0;display: none;}
+    .search_text{width: 90%; height: 50%;position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    .search_wrap input{display: block;width: 80%; height: 100%;border: none;box-sizing:border-box;background: transparent;outline: none;float: left;}
+    .search_wrap  button{width: 17px; height: 18px;position: absolute;top:50%;right:0;transform: translateY(-50%);outline: none;background: transparent;border: none;cursor: pointer;}
+    .search_wrap button img{width: 100;height: 100%;}
+    .login_text{display: none;}
+    .m_hover_back{width: 100%;height: 100vh;position: absolute;top:0;left: 0;background-color:rgba(19, 18, 18, 0.72);z-index: 1001;display: none;}
+    .header_menu{display: none;}
+    .m_header_menu{width: 90%;height: 100vh; background-color:white;position: absolute;top:0; left: -200%;z-index: 1100;transition: all 0.8s;}
+    .m_header_menu.on{left: 0;}
+    .m_login{width: 97%;height: 59px;padding-left: 3%;border-bottom: 1px solid #c7c7c7;}
+    .m_login a{display: block;position: relative;top:50%; transform: translateY(-50%);color: #444;font-family: '나눔고딕'; font-size: 16px;}
+    .close{ width: 20px; height: 20px;padding: 5px;position: absolute;right: 2%; top:15px;}
+    .close img{width: 100%;height: 100%;}
+    .m_header_menu_ul{width:35%;height: calc(100vh - 60px);overflow: hidden;overflow-y: auto;background-color: #67625d;}
+    .m_header_menu_li{width: 90%; height: 45px;line-height: 45px; padding-left: 10%;font-family: '나눔고딕'; font-size: 15px;}
+    .m_header_menu_li .li_a{display:block;width: 100%;height: 100%;position: relative;color:#fbf9f6;}
+    .find_store_img{width: 13px; height: 19px;position: relative;top:4px;margin-right: 5px;}
+    .m_header_menu_li span{display:block;width: 7px; height:11px;position: absolute;right: 5%; top:50%;transform: translateY(-50%);background: url("../img/m_menu_arrow.png") no-repeat;display: none;}
+    /* 호버 */
+    .m_header_menu_li .menu_hover{width: 65%;  height: calc(100vh - 60px);background-color: #ffffff;position: absolute;left:35%; top: 60px;overflow: hidden;overflow-y: auto;display: none;}
+    .m_header_menu_li .menu_hover ul{width: 90%;float: left;}
+    .m_header_menu_li .menu_hover ul li{font-size: 14px;font-family: '나눔고딕';color:#444;width: 90%; height: 40px;line-height: 40px;margin-left:10%;border-bottom: 1px solid #c7c7c7;text-align: left;}
+    .m_header_menu_li .menu_hover ul li a{display: inline;padding: 2px 0;}
+
+  /* 메인 섹션시작-----------------------------------------*/
+  .section_wrap{margin-top:73px;}
+    /* 메인 슬라이드--------------------------------------- */
+    .main_slide_box{max-width: 100%;min-width: 320px;position: relative;left: 50%;transform: translateX(-50%);}
+      .main_slide{width: 100%;overflow: hidden;}
+      .slide_ul{position: relative;width: 300%; left: -100%;}
+      .slide_ul::after{display: block;content: '';clear: both;}
+      .slide_li{float: left; width: 33.333%;}
+      .slide_li img{width: 100%;height: auto;vertical-align: top;}
+      .bt_box{
+        width: 99px; height: 32px;border-radius: 20px;
+        position: absolute;bottom: -16px;left: 50%;transform: translateX(-50%);
+        background-color: #ffffff;border: 1px solid #cdcdcd;
+      }
+      .bt_wrap a{display: block;width: 9px; height: 19px;padding: 2px 5px;position: absolute;top:50%;transform: translateY(-50%);z-index: 10;}
+      .bt_wrap .bt_l{left: 10px;}
+      .bt_wrap .bt_r{right:10px;}
+      .bt_wrap a img{width: 100%;height: 100%;}
+      .slide_count{position: static;text-align: center;color: #666;line-height:36px;font-size: 14px;font-family: '나눔고딕';}
+
+    /* 홀리데이 기프트--------------------------------------*/
+    .holiday_gift{margin-top: 5.8%;}
+      .holiday_gift_box{width: 100%;}
+      .holiday_gift_box::after{display: block;content: "";clear: both;}
+      .gift_list.m1{display: none;}
+      .gift_list{float: left;margin-right: 2.5%;position: relative;}
+      .gift_list.g1{width: 32.5%;}
+      .gift_list.g2{width: 20%;}
+      .gift_list.g3{width: 20%;}
+      .gift_list.g4{width: 20%;margin-right: 0;}
+      .gift_list img{width: 100%; height: auto;vertical-align: top;}
+      .gift_text{width: 62.5%; height: 14.2%;border-radius: 22px;background-color: #000cb0;position: absolute;top: 5%;right: 3.5%;}
+      .gift_list.g1 .gift_text{width: 38.46%;}
+      .gift_text p{text-align: center;  color:#f7f7fb;font-size: 1.3vw;font-family: '나눔고딕';position: relative;top: 50%;transform: translateY(-50%);}
+
+    /* 많이 검색한 제품------------------------------------ */
+    .best_item_wrap{margin-top: 2.5%;}
+      .title_best{text-align: center;width: 100%; height: 75px;}
+      .title_best p{font-size: 20px;font-family: '나눔고딕_bold';line-height: 82px; color:#444;}
+      .best_item{background-color: #ffffff;width: 100%;position: relative;overflow: hidden;}
+      .best_item ul{width:384%;margin-left: 4%;position: relative;left:0;}
+      .best_item ul li{float: left; width:4%;margin-right: 1%;position: relative;}
+      .best_item ul li img{width: 100%;height: auto;}
+      .bt_best_l,.bt_best_R{width: 4%;height: 100%;position: absolute;top: 0;cursor: pointer;}
+      .bt_best_l{left: 0;}
+      .bt_best_R{right: 0;}
+      .bt_best_l img,.bt_best_R img{width: 15px; height: 28px;position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);}
+      .num{width: 100%;margin-bottom: 6%;text-align: center;color:#838383;font-family: '나눔고딕_bold';}
+      .bestone{color:#ca0303;}
+      .num h3{padding: 16%;font-size: 25px;}
+      .bext_info{width: 100%;padding: 12% 0 15% 0;}
+      .bext_info p{font-size: 1.13vw;font-family: '나눔고딕';color:#444;text-align: center;}
+      .bext_info p:nth-child(2){margin: 4% 0 8% 0;font-size: 1.24vw;font-weight: bold;}
+
+    /* 화장품 박스---------------------------------------- */
+    .cosmetic_wrap{margin-top: 5%; background-color: #ffffff;}
+      .cosmetic_boxs{width: 100%;padding: 5% 0;}
+      .cosmetic_boxs ul{overflow: hidden;}
+      .cosmetic_boxs ul li{float: left;position: relative;height: 100%;overflow: hidden;}
+      .cosmetic_boxs ul li img{width: 100%; height: auto; vertical-align: top;transition: all 1s;}
+      .cosmetic_boxs .c1{width:36.25%;margin-right: 1%;}
+      .cosmetic_boxs .c2{width:28.5%;height: auto;margin-right: 1%;}
+      .cosmetic_boxs .c3{width:33.25%;height: auto;}
+      .c1:hover img,.c2:hover img,.box1:hover img,.box2:hover img{
+        transform:scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+      }
+      .cosmetic_boxs .c3 .box1{margin-bottom: 3%;}
+      .box1,.box2{position: relative;overflow: hidden;}
+      .text_back,.text_back02{width: 100%;background-color: rgba(255, 255, 255, 0.7);position: absolute;left: 0;z-index: 2;}
+      .text_back{height: 30%;top: 0;}
+      .text_back02{height: 28%;bottom: 0;}
+      .text_box{position: relative;top: 50%;transform: translateY(-50%);text-align: center;color:#0c0c0c;}
+      .text_box h3{font-family: '나눔고딕';font-size: 1.65vw;font-weight: 700;margin-bottom: 2%;}
+      .text_box p{font-family: '나눔고딕';font-size: 1.4vw;font-weight: 400;line-height: 1.8vw;}
+      .text_back02 h3{display: inline-block;}
+      .text_back02 p{display: inline-block;}
+
+    /* 애니 이동---------------------------------------- */
+    .cosmetic_wrap_02{margin-top: 5%; width: 100%;overflow: hidden;}
+      .move_ani{width: 100%; height: 100%;position: relative;}
+      .mens_cosme{width: 50%;position: absolute;left:-100%;opacity: 0;}
+      .skincare{width: 50%;position: absolute;right:-100%;opacity: 0;}
+      .mens_cosme img, .skincare img{width: 100%; height: auto;vertical-align: top;}
+      .move_ani_back{width: 100%;height: 100%;position: absolute;top:0; left: 0;background-color: rgba(0, 0, 0, 0.49);opacity: 0;transition: opacity 0.4s;}
+      .move_ani_back:hover{opacity: 1;}
+      .move_ani_text{position: relative;top: 50%;transform: translateY(-60%);text-align: center;}
+      .move_ani_text .m_h2{display: none;}
+      .move_ani_text h2{font-size: 1.8vw;font-family: 'SCDream7';color:#ffffff;margin-bottom: 5%;}
+      .button_buy{width: 100px; height: 31px;border-radius: 20px;background-color:rgba(255, 255, 255, 0.85);margin: 0 auto;transition: all 0.8s;}
+      .button_buy:hover{background-color:rgba(17, 16, 16, 0.85);}
+      .button_buy:hover a{color:#ffffff;}
+      .button_buy a{display: block;width: 100%;height: 100%;color:#111010;font-family: 'SCDream6';font-size: 1.35vw;line-height: 31px;}
+    /* 푸터----------------------------------------------- */
+    footer{background-color: #312f2f;margin-top: 6%;padding-bottom: 2%;}
+      .footer_text{width: 100%;text-align: center;position: relative;}
+      .footer_text p{font-family: '나눔고딕_bold';font-size: 10px;}
+      .f_p1{padding: 4% 0 2% 0;  color: #888787;line-height: 17px;}
+      .f_icon a{display: inline-block;margin-left: 1%;width: 23px; height: 23px;}
+      .f_icon a img{width: 100%;}
+      .f_p2{margin: 2.8% 0 1.8% 0;color: #656464;}
+      .f_p3{color: #fbf6f6;}
+      .f_p3 a{margin-left: 1%;}
+      .f_p3 a:nth-child(n+2){color: #888787;}
+      .f_logo{position: absolute;top:15%;right:0;width:10.58%;}
+      .f_logo img{width: 100%;}
+}
+@media screen and (min-width:1200px){
+  .h_container{width: 1200px; margin: 0 auto;}
+  /* 헤더시작--------------------------------------- */
+  header{background-color: #ffffff;width: 100%; height: 170px;position: fixed;top:0; left: 0;box-shadow: 0 4px 4px #bcbcbc;z-index: 1000;}
+    .mobile_only{display: none;}
+    .top_login{width: 100%; height: 18px;position: relative;margin: 10px 0 0;}
+    .top_login ul{position: absolute;right: 0;}
+    .top_login ul li{float: left;font-family: '나눔고딕';font-size: 11px;color:#131212;margin-left: 10px;}
+    .header_main{width: 100%;height: 95px;margin-bottom: 7px;position: relative;}
+    .logo{width: 231px;float: left;position:relative;top:50%;transform: translateY(-50%);}
+    .logo img{width: 100%;}
+    .search_wrap{float: left;width: 363px;height: 50px;border: 2px solid #ae1111;position:relative;top:50%;left: 20px;transform: translateY(-50%);}
+    .search_text{width: 90%; height: 60%;position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    .search_wrap input{display: block;width: 80%; height: 100%;border: none;box-sizing:border-box;background: transparent;outline: none;float: left;font-size: 15px;}
+    .search_wrap  button{width: 27px; height: 26px;position: absolute;top:50%;right:0;transform: translateY(-50%);outline: none;background: transparent;border: none;cursor: pointer;}
+    .search_wrap button img{width: 100;height: 100%;}
+    .login_text{
+      width: 180px;height: 18px;border-radius: 15px;background-color: #ae1111;text-align: center;color:#ffffff;position: absolute;top:2px;right: 0;
+
+      animation-name: login_text_ani;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @keyframes login_text_ani {
+      0%   {top:2px;}
+      50%  {top:8px;}
+      100% {top:2px;}
+    }
+    .login_text p{font-family: '나눔고딕';font-size: 11px;line-height: 20px;}
+    .header_menu{width:100%;height: 40px;}
+    .header_menu_li{
+      width: 100px; height: 40px;float: left;margin:0 25px;
+      text-align: center; line-height: 40px;
+      font-family: '나눔고딕_bold'; font-size: 15px;color:#131212;
+    }
+    .header_menu_li .li_a{display:inline-block;height: 40px;position: relative;}
+    .header_menu ul li span{
+      display:block;width: 0px; height:4px;
+      background-color:#67625d;position: absolute; bottom: 0;left: 50%;
+      transform: translateX(-50%);transition: all 0.5s;
+    }
+    .header_menu ul li:hover span{width: 100%;}
+    /* 호버 */
+    .menu_hover{width: 436px;display: table;height: auto;background-color: #ffffff;border: 1.5px solid #838383;display: none;}
+    .right_li{position: relative;}
+    .right_hover{position: absolute;right: 0;top:40px;}
+    .event{width: 200px; height: 200px;}
+    .event img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+    .menu_hover ul{display: table-cell;vertical-align: top;padding: 20px 0;width: 239.8px;background-color: #ffffff;}
+    .menu_hover ul li{font-size: 12px;font-family: '나눔고딕';color:#131212;width: 90%; height: 23px;line-height: 23px;padding-left:10%;text-align: left;}
+    .find_list{margin-top: 10px;}
+    .menu_hover ul li a{display: inline;}
+    .left_box{display: table-cell;vertical-align: top;width: 196.2px;height: 100%;background-color: #d0d0d1;}
+    .left_box img{width: 80%;height: auto;margin: 10% 10% 0 10%;}
+    .left_box p{font-size: 10px;font-family: '나눔고딕';color:#131212;text-align: left;line-height: 15px;margin-left: 10%;}
+    .hover_buy {width: 60px;height: 17px;border-radius: 10px; line-height: 19px;background-color: #ffffff;float: left;margin:3% 0 10% 10%;font-size: 10px;font-family: '나눔고딕';color:#131212;}
+  /* 메인 섹션시작-----------------------------------------*/
+  .section_wrap{margin-top:183px;}
+    /* 메인 슬라이드--------------------------------------- */
+    .main_slide_box{max-width: 100%;min-width: 320px;position: relative;left: 50%;transform: translateX(-50%);}
+      .main_slide{width: 100%;overflow: hidden;}
+      .slide_ul{position: relative;width: 300%; left: -100%;}
+      .slide_ul::after{display: block;content: '';clear: both;}
+      .slide_li{float: left; width: 33.333%;}
+      .slide_li img{width: 100%;height: auto;vertical-align: top;}
+      .bt_box{width: 122px; height: 39px;border-radius: 20px;position: absolute;bottom: -16px;left: 50%;transform: translateX(-50%);background-color: #ffffff;border: 1px solid #cdcdcd;}
+      .bt_wrap a{display: block;width: 9px; height: 19px;padding: 2px 5px;position: absolute;top:50%;transform: translateY(-50%);z-index: 10;}
+      .bt_wrap .bt_l{left: 10px;}
+      .bt_wrap .bt_r{right:10px;}
+      .bt_wrap a img{width: 100%;height: 100%;}
+      .slide_count{position: static;text-align: center;color: #666;line-height:40px;font-size: 14px;font-family: '나눔고딕';}
+    /* 홀리데이 기프트--------------------------------------*/
+    .holiday_gift{margin-top: 5.8%;}
+      .holiday_gift_box{width: 100%;}
+      .holiday_gift_box::after{display: block;content: "";clear: both;}
+      .gift_list.m1{display: none;}
+      .gift_list{float: left;margin-right: 2.5%;position: relative;}
+      .gift_list.g1{width: 32.5%;}
+      .gift_list.g2{width: 20%;}
+      .gift_list.g3{width: 20%;}
+      .gift_list.g4{width: 20%;margin-right: 0;}
+      .gift_list img{width: 100%; height: auto;vertical-align: top;}
+      .gift_text{width: 62.5%; height: 14.2%;border-radius: 22px;background-color: #000cb0;position: absolute;top: 5%;right: 3.5%;}
+      .gift_list.g1 .gift_text{width: 38.46%;}
+      .gift_text p{text-align: center;line-height: 36px;color:#f7f7fb; font-size: 16px;font-family: '나눔고딕';}
+    /* 많이 검색한 제품------------------------------------ */
+    .best_item_wrap{margin-top: 2.5%;}
+      .title_best{text-align: center;width: 100%; height: 75px;}
+      .title_best p{font-size: 20px;font-family: '나눔고딕_bold';line-height: 82px; color:#444;}
+      .best_item{background-color: #ffffff;width: 100%;position: relative;overflow: hidden;}
+      .best_item ul{width:384%;margin-left: 4%;position: relative;left:0;}
+      .best_item ul li{float: left; width:4%;margin-right: 1%;position: relative;}
+      .best_item ul li img{width: 100%;height: auto;}
+      .bt_best_l,.bt_best_R{width: 4%;height: 100%;position: absolute;top: 0;cursor: pointer;background-color: #ffffff;}
+      .bt_best_l{left: 0;}
+      .bt_best_R{right: 0;}
+      .bt_best_l img,.bt_best_R img{width: 15px; height: 28px;position: absolute;top:50%;left: 50%;transform: translate(-50%,-50%);}
+      .num{width: 100%;margin-bottom: 6%;text-align: center;color:#838383;font-family: '나눔고딕_bold';}
+      .bestone{color:#ca0303;}
+      .num h3{padding: 16%;font-size: 25px;}
+      .bext_info{width: 100%;padding: 12% 0 15% 0;}
+      .bext_info p{font-size: 13px;font-family: '나눔고딕';color:#444;text-align: center;}
+      .bext_info p:nth-child(2){margin: 4% 0 8% 0;font-size: 15px;font-weight: bold;}
+    /* 화장품 박스---------------------------------------- */
+    .cosmetic_wrap{margin-top: 5%; background-color: #ffffff;}
+      .cosmetic_boxs{width: 100%;padding: 5% 0;}
+      .cosmetic_boxs ul{overflow: hidden;}
+      .cosmetic_boxs ul li{float: left;position: relative;height: 100%;overflow: hidden;}
+      .cosmetic_boxs ul li img{width: 100%; height: auto; vertical-align: top;transition: all 1s;}
+      .cosmetic_boxs .c1{width:36.25%;margin-right: 1%;}
+      .cosmetic_boxs .c2{width:28.5%;height: auto;margin-right: 1%;}
+      .cosmetic_boxs .c3{width:33.25%;height: auto;}
+      .c1:hover img,.c2:hover img,.box1:hover img,.box2:hover img{
+        transform:scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+      }
+      .cosmetic_boxs .c3 .box1{margin-bottom: 3%;}
+      .box1,.box2{position: relative;overflow: hidden;}
+      .text_back,.text_back02{width: 100%;background-color: rgba(255, 255, 255, 0.7);position: absolute;left: 0;z-index: 2;}
+      .text_back{height: 30%;top: 0;}
+      .text_back02{height: 28%;bottom: 0;}
+      .text_box{position: relative;top: 50%;transform: translateY(-50%);text-align: center;color:#0c0c0c;}
+      .text_box h3{font-family: '나눔고딕';font-size: 20px;margin: 2% 0 2% 0;font-weight: 700;}
+      .text_box p{font-family: '나눔고딕';font-size: 16px;line-height: 20px;font-weight: 400;}
+      .text_back02 h3{display: inline-block;margin: 0;}
+      .text_back02 p{display: inline-block;}
+    /* 애니 이동---------------------------------------- */
+    .cosmetic_wrap_02{margin-top: 5%;}
+      .move_ani{width: 100%; height: 100%;position: relative;}
+      .mens_cosme{width: 50%;position: absolute;left:-100%;opacity: 0;}
+      .skincare{width: 50%;position: absolute;right:-100%;opacity: 0;}
+      .mens_cosme img, .skincare img{width: 100%; height: auto;vertical-align: top;}
+      .move_ani_back{width: 100%;height: 100%;position: absolute;top:0; left: 0;background-color: rgba(0, 0, 0, 0.49);opacity: 0;transition: opacity 0.5s;}
+      .move_ani_back:hover{opacity: 1;}
+      .move_ani_text{position: relative;top: 50%;transform: translateY(-60%);text-align: center;}
+      .move_ani_text .m_h2{display: none;}
+      .move_ani_text h2{font-size: 23px;font-family: 'SCDream7';color:#ffffff;margin-bottom: 37px;}
+      .button_buy{width: 107px; height: 31px;border-radius: 20px;background-color:rgba(255, 255, 255, 0.85);margin: 0 auto;transition: all 0.8s;}
+      .button_buy:hover{background-color:rgba(17, 16, 16, 0.85);}
+      .button_buy:hover a{color:#ffffff;}
+      .button_buy a{display: block;width: 100%;height: 100%;color:#111010;font-family: 'SCDream6';font-size: 16px; line-height: 31px;}
+    /* 푸터----------------------------------------------- */
+    footer{background-color: #312f2f;margin-top: 6%;padding-bottom: 2%;}
+      .footer_text{width: 100%;text-align: center;position: relative;}
+      .footer_text p{font-family: '나눔고딕_bold';font-size: 12px;}
+      .f_p1{padding: 4% 0 2% 0;  color: #888787;line-height: 17px;}
+      .f_icon a{display: inline-block;margin-left: 1%;width: 23px; height: 23px;}
+      .f_icon a img{width: 100%;}
+      .f_p2{margin: 2.8% 0 1.8% 0;color: #656464;}
+      .f_p3{color: #fbf6f6;}
+      .f_p3 a{margin-left: 1%;}
+      .f_p3 a:nth-child(n+2){color: #888787;}
+      .f_logo{position: absolute;top:15%;right:0;width:10.58%;}
+      .f_logo img{width: 100%;}
+}

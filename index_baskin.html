@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src=" https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/script_baskin.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/master_baskin.css">
+  <title>배스킨라빈스_포트폴리오용</title>
+  <style media="screen">
+  @font-face{font-family: '배스킨';src: url(font/baskin_R.woff)format('woff');}
+  @font-face{font-family: '배스킨_B';src: url(font/baskin_B.woff)format('woff');}
+  @font-face{font-family: '나눔스B';src: url(font/NanumSquareB.woff)format('woff');}
+  @font-face{font-family: '나눔스R';src: url(font/NanumSquareR.woff)format('woff');}
+  @font-face{font-family: '나눔스L';src: url(font/NanumSquareL.woff)format('woff');}
+  </style>
+</head>
+<body scroll=auto style="overflow-x:hidden">
+  <header>
+    <div class="h_container">
+      <div class="h_box">
+        <ul class="top_small">
+          <li><a>CONTACT US</a></li>
+          <li><a>영양정보</a></li>
+          <li><a>고객센터</a></li>
+        </ul>
+        <div class="h_sns_icon">
+          <a><img src="img/icon_facebook.png" alt=""></a>
+          <a><img src="img/icon_twitter.png" alt=""></a>
+          <a><img src="img/icon_blog.png" alt=""></a>
+          <a><img src="img/icon_instgram.png" alt=""></a>
+          <a><img src="img/icon_youtube.png" alt=""></a>
+        </div>
+        <h1 class="logo"><a><img src="img/logo.png" alt=""></a></h1>
+        <div class="h_search"><a class="h_search_img"></a></div>
+      </div>
+    </div>
+    <div class="search_hover_back"></div>
+    <div class="search_hover">
+      <div class="h_container">
+        <div class="left_search_box">
+          <div class="ice_search_box">
+            <p class="search_title">제품명</p>
+            <form class="" action="index.html" method="post">
+              <select class="ice_name" name="ice_name">
+                <option value="all">전체</option>
+                <option value="ice">아이스크림</option>
+                <option value="cake">아이스크림케이크</option>
+                <option value="drink">음료</option>
+                <option value="coffee">커피</option>
+                <option value="dessert">디저트</option>
+              </select>
+              <input class="text_box" type="text" name="text_ice_name" value="">
+            </form>
+          </div>
+          <div class="check_box">
+            <p class="search_title">알레르기 성분</p>
+            <form class="" action="index.html" method="post">
+              <input type="checkbox" name="checkbox" value=""><span>계란</span>
+              <input type="checkbox" name="checkbox" value=""><span>대두</span>
+              <input type="checkbox" name="checkbox" value=""><span>돼기고기</span>
+              <input type="checkbox" name="checkbox" value=""><span>땅콩</span><br>
+              <input type="checkbox" name="checkbox" value=""><span>밀</span>
+              <input type="checkbox" name="checkbox" value=""><span>복숭아</span>
+              <input type="checkbox" name="checkbox" value=""><span>우유</span>
+              <input type="checkbox" name="checkbox" value=""><span>없음</span>
+            </form>
+          </div>
+        </div>
+        <div class="right_search_box">
+          <div class="tag_search_box">
+            <p class="search_title">해시태그</p>
+            <div class="tag_wrap">
+              <form class="" action="index.html" method="post">
+                <input class="text_box tag_box" type="text" name="text_tag" value="">
+              </form>
+              <p class="text_tag">자주 찾는 해시태그<a>#우리끼리</a><a>#누가봐도끼리케이크</a><a>#우리끼리블라스트</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="button_submit">
+          <button type="submit" name="button">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu_box">
+      <div class="h_container">
+        <div class="login">
+          <ul>
+            <li><a>LOGIN</a></li>
+            <li><a>JOIN</a></li>
+          </ul>
+        </div>
+        <div class="menu_list_box h_clear">
+          <ul>
+            <li class="menu_list first_list"><a class="menu_list_a">FLAVOR OF THE MONTH<span class="hover_color">FLAVOR OF THE MONTH</span></a><span></span></li>
+            <li class="menu_list"><a class="menu_list_a">CHRISTMAS<span class="hover_color">CHRISTMAS</span></a></li>
+            <li class="menu_list"><a class="menu_list_a">MENU<span class="hover_color">MENU</span></a></li>
+            <li class="menu_list"><a class="menu_list_a">EVENT<span class="hover_color">EVENT</span></a></li>
+            <li class="menu_list"><a class="menu_list_a">STORE<span class="hover_color">STORE</span></a></li>
+            <li class="menu_list"><a class="menu_list_a">ABOUT<span class="hover_color">ABOUT</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu_hover_box">
+        <div class="h_container menu_hover_box_container">
+          <div class="happy_app"><img src="img/happypoint_app.jpg" alt=""></div>
+          <ul>
+            <li><a>공지사항</a></li>
+            <li><a>보도자료</a></li>
+            <li><a>채용정보</a></li>
+            <li><a>점포개설문의</a></li>
+            <li><a>CONTACT US</a></li>
+          </ul>
+          <ul>
+            <li><a>매장찾기</a></li>
+            <li><a>고객센터</a></li>
+          </ul>
+          <ul>
+            <li><a>진행중이벤트</a></li>
+            <li><a>당첨자발표</a></li>
+          </ul>
+          <ul>
+            <li><a>아이스크림</a></li>
+            <li><a>아이스크림케이크</a></li>
+            <li><a>음료</a></li>
+            <li><a>커피</a></li>
+            <li><a>디저트</a></li>
+          </ul>
+          <div class="flavor_ice"><a><img src="img/flavor_ice.png" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="main_section">
+    <section class="top_pie_img_wrap">
+      <div class="h_container">
+        <div class="top_pie_img">
+        <img class="back_pie_img" src="img/main_top.png" alt="">
+        <a>
+          <img class="ice_move" src="img/ice_img.png" alt=""></img>
+          <div class="click_ice"><p>click</p></div>
+        </a>
+      </div>
+      </div>
+    </section>
+    <section class="slide_wrap">
+      <div class="slide_box">
+        <ul class="slide_ul">
+          <li class="slide_li fade" style="background-color:#D71921;"><a><img src="img/main_01.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#2F9D53;" ><a><img src="img/main_02.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#F7B7D3;"><a><img src="img/main_03.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#FF6CAA;"><a><img src="img/main_04.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#C81623;"><a><img src="img/main_05.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#C81623;"><a><img src="img/main_06.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#FDA9D2;"><a><img src="img/main_07.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#ED80BD;"><a><img src="img/main_08.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#38BADC;"><a><img src="img/main_09.png" alt=""></a></li>
+          <li class="slide_li fade" style="background-color:#113E44;"><a><img src="img/main_10.png" alt=""></a></li>
+        </ul>
+        <div class="btn_slide">
+          <a class="prev"><img src="img/btn_prev.png" alt=""></a>
+          <a class="next"><img src="img/btn_next.png" alt=""></a>
+        </div>
+        <div class="dot_box"></div>
+      </div>
+    </section>
+    <section class="event_wrap">
+      <div class="h_container h_clear">
+        <div class="title"><p>BR EVENT</p></div>
+        <div class="left_event">
+          <ul>
+            <li class="event_li"><img src="img/event01.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li"><img src="img/event02.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li"><img src="img/event03.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li"><img src="img/event04.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+          </ul>
+        </div>
+        <div class="right_event">
+          <ul>
+            <li class="event_li"><img src="img/event05.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li"><img src="img/event06.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li"><img src="img/event07.png" alt=""><a><div class="more_hover"><p>상세정보<br>보기<br>→</p></div></a></li>
+            <li class="event_li more_li"><a><p>전체 이벤트 보기<br>+</p></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="BR_menu_wrap">
+      <div class="h_container">
+        <div class="title menu_title"><p>BR MENU</p></div>
+        <div class="BR_menu_box">
+          <ul>
+            <li class="BR_li BR_01">
+              <h3>ICECREAME</h3><p>프리미엄의 아이스크림의 기준,<br>베스킨라빈스</p>
+              <img class="ice_01 BR_img" src="img/ice_01_menu.png" alt="">
+              <img class="ice_02" src="img/ice_02_menu.png" alt="">
+              <a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+            <li class="BR_li BR_02">
+              <h3>ICECREAME CAKE</h3><p>아이와 어른이 좋아하는 아이스크림을<br>하나의 케이크에서 모두 즐기세요!</p>
+              <img class="cake BR_img" src="img/cake_menu.png" alt=""><a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+            <li class="BR_li BR_03">
+              <h3>COFFEE</h3><p>베스킨라빈스만의 부드러운 촉감과<br>달콤한 풍미!</p>
+              <img class="coffee BR_img" src="img/coffee_menu.png" alt=""><a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+            <li class="BR_li BR_04">
+              <h3>BEVERAGE</h3><p>아이스크림으로 즐기는 <br>배스킨라빈스만의 음료!</p>
+              <img class="beverage BR_img" src="img/drink_menu.png" alt=""><a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+            <li class="BR_li BR_05">
+              <h3>DESSERT</h3><p>아이스크림을 더욱 재미있게!<br>간편하게 즐기는 방법!</p>
+              <img class="dessert BR_img" src="img/dessert_menu.png" alt=""><a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+            <li class="BR_li BR_06">
+              <h3>GIFT</h3><p>특별한 날, 배스킨라빈스로 <br>달콤한 선물을 전해보세요!</p>
+              <img class="gift BR_img" src="img/gift_menu.png" alt=""><a><div class="BR_menu_hover"><p>more<br>+</p></div></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+    <section class="BR_store_wrap">
+      <div class="h_container store_container">
+        <div class="BR_store">
+          <p class="text_title">BR STORE</p>
+          <p class="text_01">내주변 가장 가까운<br><span style="color:#ff7c98" >배스킨라빈스</span> 매장을 찾아보세요!</p>
+          <p class="text_02">다양한 즐거움과 새로움! 우리동네 배스킨라빈스!</p>
+          <span class="bt_BR_store"><a><p>매장찾기</p></a></span>
+        </div>
+        <div class="BR_order">
+          <p class="text_title">HAPPT ORDER & DELIVERY</p>
+          <div class="BR_order_img_text_box">
+            <span class="delivery_img"><img src="img/delivery.png" alt=""></span>
+            <div class="BR_order_text_box">
+              <p class="text_01">모바일 사전 주문 & 배달 서비스 <br><span style="color:#ff7c98" >배달 콜센터 1670-3131</span></p>
+              <p class="text_02">주문에서 결제 & 배송까지 간편하게!</p>
+            </div>
+          </div>
+          <span class="bt_BR_store"><a><p>주문하기</p></a></span>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="sns_wrap">
+      <div class="h_container">
+        <div class="title"><p>SNS</p></div>
+        <div class="sns_icon_box">
+          <a><img src="img/sns_facebook.png" alt=""></a>
+          <a><img src="img/sns_twitter.png" alt=""></a>
+          <a><img src="img/sns_blog.png" alt=""></a>
+          <a><img src="img/sns_instagram.png" alt=""></a>
+          <a><img src="img/sns_youtube.png" alt=""></a>
+        </div>
+        <ul>
+          <li class="insta_li">
+            <a class="insta_img_link"><img src="img/insta01.png" alt="">
+              <div class="insta_hover">
+                <span class="insta_show">show more</span>
+                <span class="insta_text">
+                  <span class="insta_like">740</span>
+                  <span class="insta_comments">69</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="insta_li">
+            <a class="insta_img_link"><img src="img/insta02.png" alt="">
+              <div class="insta_hover">
+                <span class="insta_show">show more</span>
+                <span class="insta_text">
+                  <span class="insta_like">740</span>
+                  <span class="insta_comments">69</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="insta_li">
+            <a class="insta_img_link"><img src="img/insta03.png" alt="">
+              <div class="insta_hover">
+                <span class="insta_show">show more</span>
+                <span class="insta_text">
+                  <span class="insta_like">740</span>
+                  <span class="insta_comments">69</span>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="insta_li">
+            <a class="insta_img_link"><img src="img/insta04.png" alt="">
+              <div class="insta_hover">
+                <span class="insta_show">show more</span>
+                <span class="insta_text">
+                  <span class="insta_like">740</span>
+                  <span class="insta_comments">69</span>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="h_container">
+        <div class="f_box_01">
+          <ul class="f_list">
+            <li><a>점포개설문의</a></li>
+            <li><a>채용문의</a></li>
+            <li><a>윤리신고센터</a></li>
+            <li><a>이용약관</a></li>
+            <li style="color:#ff7c98;font-weight:bold;"><a>개인정보처리방침</a></li>
+            <li><a>영상정보처리기기운영관리방침</a></li>
+            <li><a>거래희망회사 사전등록</a></li>
+          </ul>
+          <div class="family_site">
+            <button class="" type="button" name="button">FAMILY SITE</button>
+            <ul class="family_site_ul">
+              <li><a>배스킨 스쿨</a></li>
+              <li><a>SPC그룹사이트</a></li>
+              <li><a>SPC MAGAZINE</a></li>
+              <li><a>BR코리아</a></li>
+              <li><a>해피포인트카드</a></li>
+              <li><a>파스쿠찌</a></li>
+              <li><a>삼립</a></li>
+              <li><a>파리바게트</a></li>
+              <li><a>던킨도너츠</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="f_box_02">
+        <div class="h_container">
+          <a><img src="img/f_img01.png" alt=""></a>
+          <a><img src="img/f_img02.gif" alt=""></a>
+          <a><img src="img/f_img03.png" alt=""></a>
+          <a><img src="img/f_img04.gif" alt=""></a>
+          <a><img src="img/f_img05.gif" alt=""></a>
+          <a><img src="img/f_img06.png" alt=""></a>
+        </div>
+      </div>
+      <div class="f_box_03">
+        <div class="h_container">
+          <a><img src="img/footer_logo.png" alt=""></a>
+          <pre>사업자 등록번호 : 303-81-09535      비알코리아(주) 대표이사 김창대      서울특별시 서초구 남부순환로 2620(양재동 11-149번지)<br>TEL : 080-555-3131      개인정보관리책임자 : 이중희</pre>
+          <p>Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+</body>
+</html>

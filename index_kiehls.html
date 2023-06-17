@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <script src=" https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/script_kiehls.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/master_kiehls.css">
+  <title>키엘_포트폴리오용</title>
+  <style media="screen">
+  @font-face{font-family: '나눔고딕';src: url(font/NanumBarunGothic.woff)format('woff');}
+  @font-face{font-family: '나눔고딕_bold';src: url(font/NanumBarunGothicBold.woff)format('woff');}
+  @font-face{font-family: 'SCDream6';src: url(font/SCDream6.woff)format('woff');}
+  @font-face{font-family: 'SCDream7';src: url(font/SCDream7.woff)format('woff');}
+  </style>
+</head>
+<body style="overflow-x:hidden">
+  <header>
+    <div class="header_wrap">
+      <div class="mobile_only">
+        <div class="hb"><a class="ham"><span></span></a></div>
+        <div class="m_logo"><a><img src="img/logo_mobile.jpg" alt=""></a></div>
+        <div class="m_bag"><img src="img/bag.png" alt=""></div>
+        <div class="m_search_icon"><img src="img/m_search_icon.png" alt=""></div>
+        <div class="m_hover_back"></div>
+        <div class="m_header_menu">
+          <div class="m_login"><a>로그인 I 회원가입</a></div>
+          <a class="close"><img src="img/close.png" alt=""></a>
+          <ul class="m_header_menu_ul">
+              <li class="m_header_menu_li"><a class="li_a">NEW<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>베스트 셀러</a></li>
+                  <li><a>베스트 셀러 점보 사이즈</a></li>
+                  <li><a>신제품</a></li>
+                  <li><a>2019 홀리데이 기프트</a></li>
+                  <li><a>파워풀 비타민C 에센스</a></li>
+                  <li><a>주름 패치 마스크</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">스킨 케어<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>클렌저 & 스크럽</a></li>
+                  <li><a>토너</a></li>
+                  <li><a>마스크</a></li>
+                  <li><a>아이 & 립 케어</a></li>
+                  <li><a>모이스처라이저</a></li>
+                  <li><a>크림</a></li>
+                  <li><a>에센스</a></li>
+                  <li><a>자외선 차단제</a></li>
+                  <li><a>피부 타입 및 고민별 맞춤 스킨케어</a></li>
+                  <li><a><b>컬렉션별 제품 찾기</b></a></li>
+                  <li><a><b>피부고민별 제품 찾기</b></a></li>
+                  </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">맨 케어<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>맨 베스트 셀러</a></li>
+                  <li><a>클렌저 & 쉐이빙</a></li>
+                  <li><a>토너</a></li>
+                  <li><a>아이 & 립 케어</a></li>
+                  <li><a>모이스처라이저</a></li>
+                  <li><a>안티 에이징</a></li>
+                  <li><a>바디 & 핸드 스페셜케어</a></li>
+                  <li><a>그루밍 솔루션스</a></li>
+                  <li><a>자외선 차단제</a></li>
+                  <li><a><b>컬렉션별 제품 찾기</b></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">헤어 케어<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>샴푸</a></li>
+                  <li><a>컨디셔너</a></li>
+                  <li><a>트리트먼트</a></li>
+                  <li><a>스타일링</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">바디&amp;베이비<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>클렌저 & 스크럽</a></li>
+                  <li><a>모이스처라이저</a></li>
+                  <li><a>핸드 & 바디 스페셜 케어</a></li>
+                  <li><a>맘 & 베이비</a></li>
+                  <li><a>향수</a></li>
+                  <li><a>자외선 차단제</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">기프트</a></li>
+            <li class="m_header_menu_li"><a class="li_a">브랜드<span></span></a>
+              <div class="menu_hover right_hover">
+                <ul>
+                  <li><a>공식 온라인 몰 단독 혜택</a></li>
+                  <li><a>비회원 주문 현황 확인</a></li>
+                  <li><a>2019 마일리지 프로그램</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a">EVENT</a>
+            </li>
+            <li class="m_header_menu_li"><a class="li_a find_store_text">
+              <img class="find_store_img" src="img/m_store_btn.png" alt="">매장찾기</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="h_container">
+        <div class="top_login">
+          <ul>
+            <li><a>로그인</a></li>
+            <li>I</li>
+            <li><a>회원가입</a></li>
+            <li>I</li>
+            <li><a>마이페이지</a></li>
+            <li>I</li>
+            <li><a>장바구니</a></li>
+            <li>I</li>
+            <li><a>고객센터</a></li>
+            <li>I</li>
+            <li><a>매장찾기</a></li>
+          </ul>
+        </div>
+        <div class="header_main">
+          <div class="logo"><a>
+            <img src="img/logo_kiehls.png" alt="">
+          </a></div>
+          <div class="search_wrap">
+            <form class="search_text" action="index.html" method="post">
+              <input type="text" name="search" placeholder="수분크림 한정판 출시!">
+              <button type="button" name="button"><img src="img/search_k.png" alt=""></button>
+            </form>
+          </div>
+          <a><div class="login_text"><p>로그인/회원가입 시, 꼭 읽어주세요!</p></div></a>
+        </div>
+        <div class="header_menu">
+          <ul class="header_menu_ul">
+            <li class="header_menu_li"><a class="li_a">NEW<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>베스트 셀러</a></li>
+                  <li><a>베스트 셀러 점보 사이즈</a></li>
+                  <li><a>신제품</a></li>
+                  <li><a>2019 홀리데이 기프트</a></li>
+                  <li><a>파워풀 비타민C 에센스</a></li>
+                  <li><a>주름 패치 마스크</a></li>
+                </ul>
+                <div class="left_box">
+                  <a><img src="img/menu_new.jpg" alt=""></a>
+                  <p><b>NEW 칼렌듈라 세럼 크림</b></p>
+                  <a class="hover_buy">구매하기</a>
+                </div>
+              </div>
+            </li>
+            <li class="header_menu_li"><a class="li_a">스킨 케어<span></span></a>
+              <div class="menu_hover">
+                  <ul>
+                    <li><a>클렌저 & 스크럽</a></li>
+                    <li><a>토너</a></li>
+                    <li><a>마스크</a></li>
+                    <li><a>아이 & 립 케어</a></li>
+                    <li><a>모이스처라이저</a></li>
+                    <li><a>크림</a></li>
+                    <li><a>에센스</a></li>
+                    <li><a>자외선 차단제</a></li>
+                    <li><a>피부 타입 및 고민별 맞춤 스킨케어</a></li>
+                    <li class="find_list"><a><u>컬렉션별 제품 찾기</u></a></li>
+                    <li><a><u>피부고민별 제품 찾기</u></a></li>
+                    </ul>
+                    <div class="left_box">
+                      <a><img src="img/menu_Skincare.jpg" alt=""></a>
+                      <p>스킨케어 베스트 셀러<br>공식 온라인 몰에서 가장 많은 고객님께<br>사랑받고 있는 스킨케어 베스트 셀러를
+                        <br>소개합니다.</p>
+                        <a class="hover_buy">구매하기</a>
+                      </div>
+              </div>
+            </li>
+            <li class="header_menu_li"><a class="li_a">맨 케어<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>맨 베스트 셀러</a></li>
+                  <li><a>클렌저 & 쉐이빙</a></li>
+                  <li><a>토너</a></li>
+                  <li><a>아이 & 립 케어</a></li>
+                  <li><a>모이스처라이저</a></li>
+                  <li><a>안티 에이징</a></li>
+                  <li><a>바디 & 핸드 스페셜케어</a></li>
+                  <li><a>그루밍 솔루션스</a></li>
+                  <li><a>자외선 차단제</a></li>
+                  <li class="find_list"><a>컬렉션별 제품 찾기</a></li>
+                </ul>
+                <div class="left_box">
+                  <a><img src="img/menu_menscare.jpg" alt=""></a>
+                  <p><b>NEW 에이지 디펜더 젤 모이스처라이저</b></p>
+                </div>
+              </div>
+            </li>
+            <li class="header_menu_li"><a class="li_a">헤어 케어<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>샴푸</a></li>
+                  <li><a>컨디셔너</a></li>
+                  <li><a>트리트먼트</a></li>
+                  <li><a>스타일링</a></li>
+                </ul>
+                <div class="left_box">
+                  <a><img src="img/menu_hair.jpg" alt=""></a>
+                  <p><b>아미노 애시드 헤어 케어</b><br>아미노산이 모발에 부드러움과<br>
+                    풍성함을! 달콤한 코코넛 에센셜<br>오일의 향이 기분까지 달콤하게!</p>
+                  <a class="hover_buy">구매하기</a>
+                </div>
+              </div>
+            </li>
+            <li class="header_menu_li"><a class="li_a">바디&amp;베이비<span></span></a>
+              <div class="menu_hover">
+                <ul>
+                  <li><a>클렌저 & 스크럽</a></li>
+                  <li><a>모이스처라이저</a></li>
+                  <li><a>핸드 & 바디 스페셜 케어</a></li>
+                  <li><a>맘 & 베이비</a></li>
+                  <li><a>향수</a></li>
+                  <li><a>자외선 차단제</a></li>
+                </ul>
+                <div class="left_box">
+                  <a><img src="img/menu_body.jpg" alt=""></a>
+                  <p>모두를 위한 순한 바디 클렌징<br>NEW 알로에 젤리 클렌저</p>
+                  <a class="hover_buy">자세히보기</a>
+                </div>
+              </div>
+            </li>
+            <li class="header_menu_li"><a class="li_a">기프트<span></span></a></li>
+            <li class="header_menu_li right_li"><a class="li_a">브랜드<span></span></a>
+              <div class="menu_hover right_hover">
+                <ul>
+                  <li><a>공식 온라인 몰 단독 혜택</a></li>
+                  <li><a>비회원 주문 현황 확인</a></li>
+                  <li><a>2019 마일리지 프로그램</a></li>
+                </ul>
+                <div class="left_box">
+                  <a><img src="img/menu_brand.jpg" alt=""></a>
+                  <p><b>WELCOME to KIEHL’S</b><br>탁월한 제품력과 진심을 담은<br>서비스로 166년을 이어온 키엘!<br>
+                    고객들과 진정한 신뢰를 쌓아온<br>166년의 기록!</p>
+                  <a class="hover_buy">자세히보기</a>
+                </div>
+              </div>
+            </li>
+            <li class="header_menu_li right_li"><a class="li_a">EVENT<span></span></a>
+              <div class="menu_hover right_hover event">
+                <img src="img/event.gif" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="section_wrap">
+    <section class="main_slide_box">
+      <div class="main_slide">
+        <ul class="slide_ul">
+          <li class="slide_li"><a><img src="img/main_img_03.jpg" alt=""></a></li>
+          <li class="slide_li"><a><img src="img/main_img_01.jpg" alt=""></a></li>
+          <li class="slide_li"><a><img src="img/main_img_02.jpg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="bt_box">
+        <div class="bt_wrap">
+          <a class="bt_l"><img src="img/bt_slide_L.png" alt=""></a>
+          <a class="bt_r"><img src="img/bt_slide_R.png" alt=""></a>
+        </div>
+        <div class="slide_count">
+          <b class="currentIndex"></b> /
+          <span class="slideCount">3</span>
+        </div>
+      </div>
+    </section>
+    <section class="holiday_gift">
+      <div class="h_container">
+        <div class="holiday_gift_box">
+          <div class="gift_list m1">
+            <img src="img/holiday_m.png" alt=""><div class="gift_text"><p>#홀리데이 한정판</p></div>
+          </div>
+          <div class="gift_list g1">
+            <img src="img/holiday_01.png" alt=""><div class="gift_text"><p>#홀리데이 한정판</p></div>
+          </div>
+          <div class="gift_list g2">
+            <img src="img/gift_02.png" alt=""><div class="gift_text"><p>#2-3만원대 기프트</p></div>
+          </div>
+          <div class="gift_list g3">
+            <img src="img/gift_05.png" alt=""><div class="gift_text"><p>#5-7만원대 기프트</p></div>
+          </div>
+          <div class="gift_list g4">
+            <img src="img/gift_10.png" alt=""><div class="gift_text"><p>#10만원대 기프트</p></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="best_item_wrap">
+      <div class="h_container m_container">
+        <div class="title_best"><p>많이 검색한 제품</p></div>
+        <div class="best_item">
+          <ul>
+            <li>
+              <div class="num bestone"><h3>1</h3></div>
+              <a><img src="img/best_01.jpg" alt=""></a>
+              <div class="bext_info">
+                <p>NEW 울트라 훼이셜 크림</p>
+                <p>27,000원 - 78,000원</p>
+              </div>
+            </li>
+            <li>
+              <div class="num bestone"><h3>2</h3></div>
+              <a><img src="img/best_02.jpg" alt=""></a>
+              <div class="bext_info">
+                <p>칼렌듈라 세럼 인퓨즈드 워터 크림</p><p>38,000원 - 56,000원</p>
+              </div>
+            </li>
+            <li>
+              <div class="num bestone"><h3>3</h3></div>
+              <a><img src="img/best_03.jpg" alt=""></a>
+              <div class="bext_info">
+                <p>칼렌듈라 허벌 엑스트렉트 토너</p><p>15,000원 - 102,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>4</h3></div>
+              <a><img src="img/best_04.jpg" alt=""></a>
+              <div class="bext_info">
+                <p>파워풀 비타민C 에센스</p><p>95,000원 - 115,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>5</h3></div>
+              <a><img src="img/best_05.jpg" alt=""></a>
+              <div class="bext_info">
+                <p>클리어리 코렉티브 다크 스팟 솔루션</p><p>86,000원 - 102,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>6</h3></div>
+              <a><img src="img/best_06.png" alt=""></a>
+              <div class="bext_info">
+                <p>수퍼 멀티 코렉티브 크림</p><p>82,000원 - 99,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>7</h3></div>
+              <a><img src="img/best_07.png" alt=""></a>
+              <div class="bext_info">
+                <p>훼이셜 퓨얼 에너자이징 모이스처라이저 크리트먼트 포 맨</p><p>41,000원 - 66,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>8</h3></div>
+              <a><img src="img/best_08.png" alt=""></a>
+              <div class="bext_info">
+                <p>오리지널 머스크 블렌드 N˚1</p><p>65,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>9</h3></div>
+              <a><img src="img/best_09.png" alt=""></a>
+              <div class="bext_info">
+                <p>훼이셜 퓨얼 에너자이징 토닉 포 맨</p><p>36,000원</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="num"><h3>10</h3></div>
+              <a><img src="img/best_10.png" alt=""></a>
+              <div class="bext_info">
+                <p>울트라 훼이셜 모이스처라이저</p><p>43,000원 - 62,000원</p>
+              </div>
+            </li>
+
+          </ul>
+          <div class="bt_best_l"><img src="img/best_arrow_L.png" alt=""></div>
+          <div class="bt_best_R"><img src="img/best_arrow_R.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <section class="cosmetic_wrap">
+      <div class="h_container">
+        <div class="cosmetic_boxs">
+          <ul>
+            <li class="c1">
+              <a><img src="img/avocado.png" alt=""></a>
+              <div class="text_back">
+                <div class="text_box">
+                  <h3>#아보카도 보습 마스크</h3>
+                  <p>수퍼푸드 아보카도를 그대로!<br>구매시, 우드 스패츌러 증정</p>
+                </div>
+              </div>
+            </li>
+            <li class="c2">
+              <a><img src="img/perfume.png" alt=""></a>
+              <div class="text_back">
+                <div class="text_box">
+                  <h3>#오리지널 머스크 향수</h3>
+                  <p>남심여심을 사로잡는 향수<br>데일리 향수</p>
+                </div>
+              </div>
+            </li>
+            <li class="c3">
+              <div class="c3_img box1">
+                <a><img src="img/cream.png" alt=""></a>
+                <div class="text_back02">
+                  <div class="text_box">
+                    <h3>#칼렌듈라 세럼크림</h3>
+                    <p>고농축 세럼이 크림 안에!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="c3_img box2">
+                <a><img src="img/essense.png" alt=""></a>
+                <div class="text_back02">
+                  <div class="text_box">
+                    <h3>#파워풀비타민C에센스</h3>
+                    <p>팔자주름 흔적없이 해결!</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cosmetic_wrap_02">
+      <div class="h_container">
+        <div class="move_ani">
+          <div class="mens_cosme move1"><img class="iimmm" src="img/for_men.png" alt="">
+            <div class="move_ani_back">
+              <div class="move_ani_text">
+                <h2>남성 안티 에이징, 키엘 에이지 디펜더!</h2>
+                <div class="button_buy"><a class="dd">구매하기</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="skincare move1"><img src="img/skincare.png" alt="">
+            <div class="move_ani_back">
+              <div class="move_ani_text">
+                <h2 class="pc_h2">피부 고민 체크하고 나만의 스킨 케어 루틴을 찾으세요!</h2>
+                <h2 class="m_h2">피부 고민 체크하고<br> 나만의 스킨 케어 루틴을 찾으세요!</h2>
+                <div class="button_buy"><a class="dd">구매하기</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="h_container">
+        <div class="footer_text">
+          <p class="f_p1">사업자명: 엘오케이(유)｜대표: 크리스티앙 마르코스 아르나이<br>
+            사업자 등록번호: 220-81-73483 |통신판매업신고: 2012-서울강남-01663 <a>사업자 정보 확인▶</a><br>
+            주소: 서울특별시 강남구 영동대로 517 아셈타워 31층개인정보관리책임자: 유민아<br>
+            고객 케어 센터: 구매, 배송, 사이트 이용 문의 080-822-3322  I  제품 문의: 080-022-3332</p>
+          <div class="f_icon">
+            <a><img src="img/facebook_02.png" alt=""></a>
+            <a><img src="img/ki_insta.png" alt=""></a>
+          </div>
+          <p class="f_p2">퍼스트데이터코리아(유) 구매안전(에스크로) 서비스가맹점 고객님은 안전한 전자상거래를 위해 저희 쇼핑몰에서 가입한 퍼스트데이터코리아(유)의 구매안전 서비스를 이용할 수 있습니다.</p>
+            <p class="f_p3">Ⓒ 2019 KIEHL’S SINCE 1851.<a>개인정보처리방침</a><a>이용약관</a><a>글로벌 사이트</a></p>
+          <div class="f_logo"><img src="img/logo_footer.png" alt=""></div>
+        </div>
+      </div>
+    </footer>
+  </section>
+</body>
+</html>

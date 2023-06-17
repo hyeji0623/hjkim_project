@@ -1,0 +1,340 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none; cursor: pointer;}
+li{list-style: none;}
+.h_container{width: 1200px;margin: 0 auto;}
+.h_clear::after{display:block;content: "";clear: both;}
+/* 헤더------------------------------------------ */
+header{
+  position: fixed;top: 0;left: 0;
+  width: 100%;height: 182px;background-color: #ff7c98;z-index: 1001;
+ }
+  .h_box{width: 100%; height: 136px;position: relative;}
+  .top_small{position: absolute;top:10px; right: 0;}
+  .top_small li{float: right;margin-left: 34px;color: #0c0c0c;font-size: 11px;font-family: '나눔스R';}
+  .logo{position:absolute;top:50%;left: 50%;transform: translate(-50%,-50%);}
+  .logo a{display: block;width: 92px;height: 92px;}
+  .logo a img{width: 100%;height: 100%;}
+  .h_sns_icon{
+    width: 245px; height: 35px;
+    position: relative;top:50%;
+    transform: translateY(-50%);
+    font-size: 0;float: left;
+  }
+  .h_sns_icon a{
+    display: inline-block;
+    width: 35px; height: 35px;
+    margin-right: 14px;
+  }
+  .h_sns_icon a img{width: 100%;height: 100%;}
+  .h_search{float: right;position: relative;top:50%;transform: translateY(-50%);}
+  .h_search_img{display: block;width: 54px;height: 54px;background: url(../img/icon_search.png) no-repeat;}
+  .h_search_img.on{background: url(../img/search_close.png) no-repeat;}
+  .menu_box{width: 100%; height: 44px;border-bottom: 2px solid #003590;background-color: #ffffff;}
+  .login{width: 206px;height: 100%; float: left;line-height: 45px;}
+  .login li{float: left;margin-right: 66px;font-size: 14px;font-family: '배스킨_B';}
+  .login li:nth-child(2){margin-right: 0;}
+  .menu_list_box{width: 994px; height: 100%; float: right;}
+  .menu_list{float: left;width: 154px; height: 100%;font-size: 14px;font-family: '배스킨_B';line-height: 45px;text-align: center;color: #0c0c0c;}
+  .first_list{width: 224px;}
+  .menu_list_a{position: relative;display: inline-block;}
+  .hover_color{position: absolute;top: 0;left: 0;width: 0%; height: 100%;text-align: left;overflow: hidden;color:#ff7c98;transition: all 1s;}
+  .menu_list_a:hover .hover_color{width: 100%;transition: all 0.7s;}
+  /* 리스트 호버 */
+  .menu_hover_box{
+    width: 100%;height: 258px;
+    background-color: #ffffff;overflow: hidden;
+    display: none;border-top:1px solid #003590;border-bottom:1px solid #003590;
+  }
+  .menu_hover_box ul{float: right;text-align:center;margin-top: 30px;}
+  .menu_hover_box ul li{width: 154px;line-height: 40px;font-size: 15px;font-family: '나눔스R';color: #0c0c0c;}
+  .menu_hover_box_container{height: 100%;position: relative;}
+  .happy_app{position: absolute;left: 0;top:59.5px;}
+  .flavor_ice{float: right;margin-right: 154px;width: 224px; height: 100%;position: relative;opacity: 0;transition: all 0.5s;transition-delay: 0.5s;}
+  .flavor_ice img{width: 70%;position: absolute;top:40px;left: 50%;transform: translateX(-50%);}
+  /* 서치클릭 */
+  .search_hover_back{
+    width: 100%;height: 100vh;
+    position: absolute;
+    top:182px;right: 0;left:0;bottom: 0;
+    display: none;
+    background: #000;
+  }
+  .search_hover_back.on{opacity: 0.5;display: block;}
+  .search_hover{
+    width: 100%; height: 224px;
+    position: absolute;
+    top:150px; left: 0;
+    background-color: #ffffff;
+    display: none;
+    opacity: 0.6;
+  }
+  .left_search_box,.right_search_box{width: 45%;float: left;margin-top: 20px;}
+  .search_title{
+    width: 120px;font-size: 16px;font-family: '나눔스R';color: #444;
+    float: left;line-height: 33px;
+  }
+  .ice_search_box form,.check_box form{display: inline-block;}
+  .ice_name{
+    float: left;font-size: 13px;font-family: '나눔스L';color: #444;
+    width: 125px; height: 32px; border-radius: 5px;
+    border: 1px solid #c7c7c7;outline: none; margin-right: 16px;
+  }
+  .text_box{
+    float: left;padding-left: 10px;
+    width: 259px; height: 32px;outline: none;border: none;
+    background-color: #ece7e7;
+  }
+  .check_box{margin:35px 0 25px 0;}
+  .check_box form input{
+    width: 16px; height: 16px;background: #ffffff;
+    margin-right:2px;float: left;
+  }
+  .check_box span{
+    display: inline-block;width: 70px;float: left;
+    font-size: 14px;font-family: '나눔스R';color: #444;
+  }
+  .right_search_box{margin-left: 5%;width: 50%;}
+  .tag_search_box{width: 100%;}
+  .tag_wrap{width: calc(100% - 120px);float: left;}
+  .tag_search_box form{width:100%;}
+  .tag_box{width: calc(100% - 10px);margin-bottom: 12px;}
+  .text_tag{font-size: 14px;font-family: '나눔스R';color: #444;}
+  .text_tag a{margin-left:10px;color:#ff7c98; }
+  .button_submit{clear: both; text-align: center;}
+  .button_submit button{
+    border: none; outline: none;
+    width: 145px;height: 37px;background-color:#ff7c98;
+    border-radius: 20px;font-size: 16px;font-family: '나눔스R';color: #ffffff;
+    cursor: pointer;
+  }
+/* 메인시작--------------------------------------- */
+.main_section{position: relative; top:182px;}
+  /* 메인_초코파이----------------------------------- */
+  .top_pie_img_wrap{background-color:#C81623;}
+    .top_pie_img_wrap>.h_container{height: 150px;position: relative;}
+    .top_pie_img{width: 1600px;height: 100%;position: absolute;top:0;left: 50%;transform: translateX(-50%);}
+    .back_pie_img{width: 100%;}
+    .ice_move{
+      width: 148px;position: absolute;top:8px;right: 625px;cursor: pointer;z-index: 1;
+
+      animation-name: ice_ani;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @keyframes ice_ani {
+      0%   {top:8px;}
+
+      50%  {top:15px;}
+
+      100% {top:8px;}
+    }
+    .click_ice{
+      width:62px;height: 62px;border-radius: 50%;
+      background-color: rgba(18, 17, 17, 0.6);
+      position: absolute;top:50px;right:668px;display: none;
+      transition: all 0.8s;z-index: 2;
+    }
+    .click_ice p{text-align: center;line-height: 62px;color:white;font-family: '배스킨_B';font-size: 14px;letter-spacing: 0.8px;}
+    .top_pie_img a:hover .click_ice{display: block;}
+  /* 메인_슬라이드---------------------------------- */
+  .slide_wrap{width: 100%;height: 698px;position: relative; background-color: white;z-index: 3;}
+      .slide_box .slide_ul{width: 100%;height:100%;}
+      .slide_box .less_1200{display: none;}
+      .slide_li{display: none;width: 100%;height: 100%;position: absolute;top:0;left: 0;}
+      .slide_li img{width:1600px;height: 100%;position: absolute;left: 50%;transform: translateX(-50%);}
+      .btn_slide .prev,.btn_slide .next{position: absolute;top: 50%; transform: translateY(-50%);}
+      .btn_slide .prev{left: 3%;}
+      .btn_slide .next{right: 3%;}
+      .dot_box{position: absolute;left: 50%; bottom: 20px;transform: translateX(-50%);}
+      .dot{
+        display: inline-block;
+        width: 12px; height: 12px;
+        margin: 0 5px; border-radius: 50%;cursor: pointer;
+        background-color: rgb(255, 255, 255);
+      }
+      .dot.active{background-color: rgb(66, 63, 61);}
+  /* 이벤트----------------------------------------- */
+  .event_wrap{margin-top: 97px; width: 100%; height: 631px;}
+    .title{width: 100%; height: 53px;}
+    .title p{text-align:center;font-size: 25px;font-family: '배스킨_B';color: #0c0c0c;}
+    .left_event,.right_event{width: 578px;height: 578px;float: left;}
+    .left_event{margin-right: 44px;}
+    .event_li{float: left;width: 289px; height: 289px; position: relative;}
+    .event_li img{width: 100%;height: 100%;vertical-align: top;}
+    .more_li{background-color: #ff7c98;}
+    .more_hover{
+      width: 113px; height: 113px; border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;bottom: 22px; right: 5px;opacity: 0;
+      transition:all 0.5s;
+    }
+    .event_li:hover .more_hover{right: 28px;opacity: 1;}
+    .more_hover:hover{background-color: #003590;}
+    .more_hover p{
+      font-size: 15px;font-family: '나눔스R';font-weight: bold;
+      color: #ffffff; text-align: center;line-height: 20px;
+      position: relative;top:60%;transform: translateY(-50%);
+    }
+    .more_li p{
+      width: 100%;font-size: 20px;font-family: '배스킨';
+      color:#424040; text-align: center;line-height: 30px;position: absolute;top:40%;
+    }
+  /* 메뉴------------------------------------------- */
+  .BR_menu_wrap{margin: 125px 0;height: 1296px;background: url(../img/br_menu_back.png) no-repeat center ;}
+   .menu_title{padding-top: 60px;}
+   .BR_menu_box{margin-top: 12px;}
+   .BR_menu_box>ul::after{display: block;content: "";clear: both;}
+   .BR_li{
+     float: left; margin:0 44px 81px 0;
+     width: 578px; height: 306px;
+     background-color: #ffffff;
+     border-radius: 10px;
+     position: relative;
+   }
+   .BR_li:nth-child(2n){margin-right: 0;}
+   .BR_li h3{font-size: 25px;font-family: '나눔스B';margin: 54px 0 18px 40px;letter-spacing: 1px;}
+   .BR_li p{margin-left: 40px;font-size: 18px;font-family: '나눔스R';color: #444;}
+   .BR_menu_hover{
+     width: 110px; height: 110px;border-radius: 50%;
+     background-color: rgba(0, 0, 0, 0.5);position: absolute; opacity: 0;
+     bottom: 37px;left: 40px;transition: all 0.5s;
+   }
+   .BR_menu_hover p{
+     text-align: center;margin-left: 0;position: relative;top:55%;transform: translateY(-50%);
+     font-size: 20px;font-family: '나눔스B';color: #ffffff;
+   }
+   .BR_01{color: #ff7c98;}
+   .BR_02{color: #fec026;}
+   .BR_03{color: #752518;}
+   .BR_04{color: #ff8d9a;}
+   .BR_05{color: #f592a7;}
+   .BR_06{color: #e8669e;}
+   .BR_menu_box img{transition: all 0.4s;}
+   .ice_01{position: absolute;top:18px;right: 12px;z-index: 1;width: 208px;}
+   .ice_02{position: absolute;bottom:-42px;left:213px;}
+   .cake{position: absolute;top:83px;right: 13px;width: 261px;}
+   .coffee{position: absolute;top:28px;right: 54px;width: 169px;}
+   .beverage{position: absolute;top:10px;right: 54px;width: 192px;}
+   .dessert{position: absolute;bottom:39px;right: 54px;width: 263px;}
+   .gift{position: absolute;top:52px;right:43px;width: 234px;}
+   /* 호버 */
+   .BR_li:hover .BR_menu_hover{opacity: 1;}
+   .BR_li:hover .BR_img{transform:scale(1.05, 1.05);
+        -webkit-transform: scale(1.05, 1.05);}
+   .BR_menu_hover:hover{background-color: #003590;}
+  /* 매장찾기&배달------------------------------------ */
+  .BR_store_wrap{
+    display: block;width: 100%;height: 478px;
+    margin: 0 auto;background: url(../img/store_backimg.png)fixed;
+    background-position: center;
+    }
+    .store_container{position: relative; height: 100%;}
+    .BR_store,.BR_order{width: 490px;height: 490px;border-radius: 50%;transition: all 1.5s;opacity: 0;position: absolute;}
+    .BR_store{bottom: 61px;left: 88px;background-color: #2a1b17;}
+    .BR_order{top: 61px;right: 88px;background-color:#f9f4ec;}
+    .BR_store.on,.BR_order.on{transform: rotateY(360deg);opacity: 1;}
+    .BR_store p{color: #f7f7f7;text-align:center;}
+    .text_title{margin: 141px 0 30px 0;font-size: 25px; font-family: '배스킨_B';text-align:center;}
+    .text_01{font-size: 20px; font-family: '배스킨';margin-bottom: 16px;line-height: 25px;}
+    .text_02{font-size: 15px;font-family: '배스킨';margin-bottom: 22px;}
+    .bt_BR_store{
+      display: block; margin: 0 auto;width: 167px; height: 48px;
+      border-radius: 10px;border: 3px solid #ff7c98;
+    }
+    .bt_BR_store a{display: block;width: 100%;height: 100%;}
+    .bt_BR_store p{font-size: 18px;font-family: '배스킨_B';line-height: 48px;text-align:center;}
+    .BR_order p{color: #444444;}
+    .BR_order_img_text_box{margin:0 0 22px 0;position: relative;}
+    .delivery_img{margin-left:39px;}
+    .BR_order_text_box{position: absolute;top:0;left: 182px;}
+  /* sns--------------------------------------------- */
+  .sns_wrap{
+      margin-top: 125px;width: 100%;
+      background-color: red;padding-bottom: 134px;
+      background: url(../img/camera.png) no-repeat;
+      background-position: right 0 bottom 0;
+    }
+    .sns_icon_box{margin: 20px 0 60px 0; text-align: center;font-size: 0;}
+    .sns_icon_box a{display: inline-block;margin:0 16px;}
+    .sns_wrap ul{width: 100%;}
+    .sns_wrap ul::after{display: block;content: '';clear: both;}
+    .insta_li{position: relative;float: left;width: 22.75%;margin-right:3%;height: auto;border-radius: 5px;overflow: hidden;}
+    .insta_li:nth-child(4){margin-right:0;}
+    .insta_li img{width: 100%;vertical-align: top;}
+    .insta_hover{
+      position: absolute;top:0;left: 0;
+      background-color: rgba(14, 13, 13, 0.56);
+      width: 100%;height: 100%;color: #fcf7f8;
+      text-align: center;font-family: '배스킨';
+      opacity: 0; transition: all 0.5s;
+    }
+    .insta_li:hover .insta_hover{opacity: 1;}
+    .insta_show{
+      display: block;width: 147px;height: 49px;
+      background-color: #ff7c98;
+      border-radius: 28px; margin: 86px auto 17px;
+      line-height: 49px;font-size: 18px;
+    }
+    .insta_text{font-size: 17px;}
+    .insta_like,.insta_comments{
+      position: relative;display: inline-block;
+      padding-left: 23px;margin-right: 5px;
+    }
+    .insta_like::before{
+      content: '';position: absolute;
+      top: 0;left: 0;background: url(../img/heart.png) no-repeat;
+      width: 18px; height: 19px;
+    }
+    .insta_comments::before{
+      content: '';position: absolute;top: 0;left: 0;
+      background: url(../img/text.png) no-repeat;
+      width: 18px; height: 19px;
+    }
+  /* footer------------------------------------------- */
+  footer{width: 100%; height: 398px;}
+    .f_box_01{
+      width: 100%;height: 68px;
+      border-top: 2px solid #cdcdcd;
+      position: relative;
+    }
+    .f_list li{
+      display: inline-block;margin-right: 47px;
+      font-size: 13px;font-family: '나눔스R';
+      line-height: 70px; color: #444;
+    }
+    .family_site{
+      width: 196px;height: 37px;
+      position: absolute;right: 0;
+      top:50%;transform: translateY(-50%);
+    }
+    .family_site button{
+      width: 100%;height: 100%;border-radius: 5px;border: 1px solid #cdcdcd;box-sizing: border-box;
+      background: transparent url(../img/arrow_off.png) no-repeat 100% 0;
+      text-align: left;font-size: 12px;font-family: '나눔스R';
+      padding-left: 22px; color: #cdcdcd;outline: none;
+    }
+    .family_site .on{background: transparent url(../img/arrow_on.png) no-repeat 100% 0;}
+    .family_site_ul{
+      width: 194px;height: 198px;padding: 10px 0;background-color: #ffffff;
+      border-radius: 5px 5px 0 0;border: 1px solid #cdcdcd;
+      position: absolute;bottom: 32px;display: none;
+    }
+    .family_site_ul li{
+      width: calc( 100% - 25px);height: 22px;padding-left: 25px;line-height: 22px;
+      font-family: '나눔스B';font-size: 13px;color: #646464;
+    }
+    .family_site_ul li:hover{background-color: #dadada;}
+    .family_site_ul li a{display: block;width: 100%;height: 100%}
+    .f_box_02{width: 100%;height: 93px;text-align: center;background-color: #f9f8f7;}
+    .f_box_02 a{line-height: 105px;margin: 0 21px;}
+    .f_box_02 a:nth-child(n+4){margin: 0 5px;}
+    .f_box_03{text-align: center;}
+    .f_box_03 img{margin:52px 0 42px 0;}
+    .f_box_03 p{font-size: 11px;font-family: '나눔스R';color:#939090;margin-top: 21px;}
+    .f_box_03 pre{font-size: 11px;font-family: '나눔스R';color:#444;line-height: 15px;}
+@media screen and (max-width:1200px){
+  .top_pie_img_wrap>.h_container{overflow: hidden;}
+  .slide_li>a{display:block;width:1200px;height: 100%;margin: 0 auto;position: relative;overflow: hidden;}
+  .BR_menu_wrap,.BR_store_wrap,footer,.sns_wrap{width: 1200px;}
+}
